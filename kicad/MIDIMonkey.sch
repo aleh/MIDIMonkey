@@ -1,0 +1,396 @@
+EESchema Schematic File Version 2
+LIBS:aleh
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "MIDIMonkey"
+Date ""
+Rev ""
+Comp "Aleh Dzenisiuk"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L DIN-5_180degree J1
+U 1 1 5AD1DAB8
+P 3200 3550
+F 0 "J1" H 3325 3775 50  0000 C CNN
+F 1 "MIDI IN" H 3200 3300 50  0000 C CNN
+F 2 "Aleh:PROTO_MIDI" H 3200 3550 50  0001 C CNN
+F 3 "" H 3200 3550 50  0001 C CNN
+	1    3200 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L 6N138 U1
+U 1 1 5AD1DC43
+P 4400 3750
+F 0 "U1" H 4400 3450 60  0000 C CNN
+F 1 "6N138" H 4400 4150 60  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 4400 3750 60  0001 C CNN
+F 3 "" H 4400 3750 60  0001 C CNN
+	1    4400 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATtiny85 U2
+U 1 1 5AD1DFF7
+P 6700 3650
+F 0 "U2" H 6700 4000 60  0000 C CNN
+F 1 "ATtiny85" H 6700 3300 60  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 6700 4050 60  0001 C CNN
+F 3 "" H 6700 4050 60  0001 C CNN
+	1    6700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5AD1E16C
+P 3750 3750
+F 0 "R1" V 3830 3750 50  0000 C CNN
+F 1 "200" V 3750 3750 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3680 3750 50  0001 C CNN
+F 3 "" H 3750 3750 50  0001 C CNN
+	1    3750 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L +5V #PWR01
+U 1 1 5AD1E2ED
+P 4950 3100
+F 0 "#PWR01" H 4950 2950 50  0001 C CNN
+F 1 "+5V" H 4950 3240 50  0000 C CNN
+F 2 "" H 4950 3100 50  0001 C CNN
+F 3 "" H 4950 3100 50  0001 C CNN
+	1    4950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5AD1E365
+P 4950 4300
+F 0 "#PWR02" H 4950 4050 50  0001 C CNN
+F 1 "GND" H 4950 4150 50  0000 C CNN
+F 2 "" H 4950 4300 50  0001 C CNN
+F 3 "" H 4950 4300 50  0001 C CNN
+	1    4950 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5AD1E3A1
+P 4950 3950
+F 0 "R2" V 5030 3950 50  0000 C CNN
+F 1 "1K" V 4950 3950 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 4880 3950 50  0001 C CNN
+F 3 "" H 4950 3950 50  0001 C CNN
+	1    4950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5AD1E58C
+P 5100 3450
+F 0 "R3" V 5180 3450 50  0000 C CNN
+F 1 "5K1" V 5100 3450 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 5030 3450 50  0001 C CNN
+F 3 "" H 5100 3450 50  0001 C CNN
+	1    5100 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_02x05_Odd_Even J3
+U 1 1 5AD1E8DA
+P 6650 4800
+F 0 "J3" H 6700 5100 50  0000 C CNN
+F 1 "ISP" H 6700 4500 50  0000 C CNN
+F 2 "Aleh:PROTO_2x5" H 6650 4800 50  0001 C CNN
+F 3 "" H 6650 4800 50  0001 C CNN
+	1    6650 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 5250 3750 2    60   Output ~ 0
+RXMIDI
+Text GLabel 7450 4000 2    60   Input ~ 0
+RXMIDI
+Text GLabel 6450 4600 0    60   Output ~ 0
+MOSI
+Text GLabel 6450 4800 0    60   Output ~ 0
+RST
+Text GLabel 6450 4900 0    60   Output ~ 0
+SCK
+Text GLabel 6450 5000 0    60   Input ~ 0
+MISO
+NoConn ~ 6450 4700
+NoConn ~ 6950 4700
+NoConn ~ 6950 4800
+NoConn ~ 6950 4900
+$Comp
+L +5V #PWR03
+U 1 1 5AD1EC14
+P 7050 4500
+F 0 "#PWR03" H 7050 4350 50  0001 C CNN
+F 1 "+5V" H 7050 4640 50  0000 C CNN
+F 2 "" H 7050 4500 50  0001 C CNN
+F 3 "" H 7050 4500 50  0001 C CNN
+	1    7050 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5AD1EC40
+P 7050 5100
+F 0 "#PWR04" H 7050 4850 50  0001 C CNN
+F 1 "GND" H 7050 4950 50  0000 C CNN
+F 2 "" H 7050 5100 50  0001 C CNN
+F 3 "" H 7050 5100 50  0001 C CNN
+	1    7050 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR05
+U 1 1 5AD1ECBA
+P 7150 3350
+F 0 "#PWR05" H 7150 3200 50  0001 C CNN
+F 1 "+5V" H 7150 3490 50  0000 C CNN
+F 2 "" H 7150 3350 50  0001 C CNN
+F 3 "" H 7150 3350 50  0001 C CNN
+	1    7150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 5AD1ECE6
+P 6250 3900
+F 0 "#PWR06" H 6250 3650 50  0001 C CNN
+F 1 "GND" H 6250 3750 50  0000 C CNN
+F 2 "" H 6250 3900 50  0001 C CNN
+F 3 "" H 6250 3900 50  0001 C CNN
+	1    6250 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 7450 3500 2    60   Input ~ 0
+SCK
+Text GLabel 7450 3750 2    60   Input ~ 0
+MISO
+Text GLabel 7450 3900 2    60   Input ~ 0
+MOSI
+Text GLabel 7450 3650 2    60   Output ~ 0
+TRIG1
+Text GLabel 7450 3400 2    60   Output ~ 0
+TRIG2
+Text GLabel 6050 3700 0    60   Output ~ 0
+TRIG4
+Text GLabel 6050 3550 0    60   Output ~ 0
+TRIG3
+Text GLabel 6050 3400 0    60   Input ~ 0
+RST
+Text GLabel 6050 3300 0    60   Output ~ 0
+TRIG5
+Text GLabel 6450 2550 3    60   Input ~ 0
+TRIG1
+Text GLabel 6550 2550 3    60   Input ~ 0
+TRIG2
+Text GLabel 6650 2550 3    60   Input ~ 0
+TRIG3
+Text GLabel 6750 2550 3    60   Input ~ 0
+TRIG4
+Text GLabel 6850 2550 3    60   Input ~ 0
+TRIG5
+Wire Wire Line
+	4000 3650 3500 3650
+Wire Wire Line
+	4000 3750 3900 3750
+Wire Wire Line
+	3600 3750 3500 3750
+Wire Wire Line
+	3500 3750 3500 3950
+Wire Wire Line
+	3500 3950 2850 3950
+Wire Wire Line
+	2850 3950 2850 3650
+Wire Wire Line
+	2850 3650 2900 3650
+Wire Wire Line
+	4950 3100 4950 3550
+Wire Wire Line
+	4950 3550 4800 3550
+Wire Wire Line
+	4950 3650 4800 3650
+Wire Wire Line
+	4950 4100 4950 4300
+Wire Wire Line
+	4950 3800 4950 3650
+Wire Wire Line
+	4800 3850 4800 4200
+Wire Wire Line
+	4800 4200 4950 4200
+Connection ~ 4950 4200
+Wire Wire Line
+	4800 3750 5250 3750
+Wire Wire Line
+	5100 3300 5100 3200
+Wire Wire Line
+	5100 3200 4950 3200
+Connection ~ 4950 3200
+Wire Wire Line
+	5100 3750 5100 3600
+Connection ~ 5100 3750
+Wire Wire Line
+	7050 4500 7050 4600
+Wire Wire Line
+	7050 4600 6950 4600
+Wire Wire Line
+	6950 5000 7050 5000
+Wire Wire Line
+	7050 5000 7050 5100
+Wire Wire Line
+	7450 3400 7300 3400
+Wire Wire Line
+	7300 3400 7300 3500
+Wire Wire Line
+	7300 3500 7450 3500
+Wire Wire Line
+	7300 3450 7250 3450
+Wire Wire Line
+	7250 3450 7250 3600
+Wire Wire Line
+	7250 3600 7100 3600
+Connection ~ 7300 3450
+Wire Wire Line
+	7100 3700 7300 3700
+Wire Wire Line
+	7300 3650 7300 3750
+Wire Wire Line
+	7300 3650 7450 3650
+Wire Wire Line
+	7300 3750 7450 3750
+Connection ~ 7300 3700
+Wire Wire Line
+	7450 3900 7300 3900
+Wire Wire Line
+	7300 3900 7300 4000
+Wire Wire Line
+	7300 4000 7450 4000
+Wire Wire Line
+	7100 3800 7250 3800
+Wire Wire Line
+	7250 3800 7250 3950
+Wire Wire Line
+	7250 3950 7300 3950
+Connection ~ 7300 3950
+Wire Wire Line
+	7150 3350 7150 3500
+Wire Wire Line
+	7150 3500 7100 3500
+Wire Wire Line
+	6300 3800 6250 3800
+Wire Wire Line
+	6250 3800 6250 3900
+Wire Wire Line
+	6300 3700 6050 3700
+Wire Wire Line
+	6300 3600 6200 3600
+Wire Wire Line
+	6200 3600 6200 3550
+Wire Wire Line
+	6200 3550 6050 3550
+Wire Wire Line
+	6300 3500 6300 3350
+Wire Wire Line
+	6300 3350 6200 3350
+Wire Wire Line
+	6200 3300 6200 3400
+Wire Wire Line
+	6200 3400 6050 3400
+Wire Wire Line
+	6050 3300 6200 3300
+Connection ~ 6200 3350
+Wire Wire Line
+	6450 2450 6450 2550
+Wire Wire Line
+	6550 2450 6550 2550
+Wire Wire Line
+	6650 2450 6650 2550
+Wire Wire Line
+	6750 2450 6750 2550
+Wire Wire Line
+	6850 2450 6850 2550
+$Comp
+L GND #PWR07
+U 1 1 5AD28780
+P 7300 2700
+F 0 "#PWR07" H 7300 2450 50  0001 C CNN
+F 1 "GND" H 7300 2550 50  0000 C CNN
+F 2 "" H 7300 2700 50  0001 C CNN
+F 3 "" H 7300 2700 50  0001 C CNN
+	1    7300 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR08
+U 1 1 5AD287B2
+P 7300 2450
+F 0 "#PWR08" H 7300 2300 50  0001 C CNN
+F 1 "+5V" H 7300 2590 50  0000 C CNN
+F 2 "" H 7300 2450 50  0001 C CNN
+F 3 "" H 7300 2450 50  0001 C CNN
+	1    7300 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2450 7050 2700
+Wire Wire Line
+	7050 2700 7300 2700
+Wire Wire Line
+	7300 2450 7300 2550
+Wire Wire Line
+	7300 2550 6950 2550
+Wire Wire Line
+	6950 2550 6950 2450
+$Comp
+L Conn_01x08 J2
+U 1 1 5AD31C77
+P 6650 2250
+F 0 "J2" H 6650 2650 50  0000 C CNN
+F 1 "OUTPUTS" H 6650 1750 50  0000 C CNN
+F 2 "Aleh:PROTO_8" H 6650 2250 50  0001 C CNN
+F 3 "" H 6650 2250 50  0001 C CNN
+	1    6650 2250
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 6350 2450
+$EndSCHEMATC
